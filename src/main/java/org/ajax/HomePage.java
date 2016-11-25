@@ -22,7 +22,7 @@ public class HomePage extends WebPage {
 			protected void onClientInfo(AjaxRequestTarget target, WebClientInfo clientInfo) {
 				// TODO Auto-generated method stub
 				super.onClientInfo(target, clientInfo);
-				target.appendJavaScript(String.format("alert('Port == %s');", clientInfo.getProperties().getExtra().get("port")));
+				target.appendJavaScript(String.format("alert('Protocol == %s');", clientInfo.getProperties().getExtra().get("protocol")));
 			}
 		});
 	}
