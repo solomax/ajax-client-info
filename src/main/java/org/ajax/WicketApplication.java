@@ -9,7 +9,7 @@ import org.apache.wicket.protocol.http.WebApplication;
  * @see org.ajax.Start#main(String[])
  */
 public class WicketApplication extends WebApplication
-{    	
+{
 	/**
 	 * @see org.apache.wicket.Application#getHomePage()
 	 */
@@ -26,7 +26,6 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
-
-		// add your configuration here
+		getRequestCycleSettings().setExtraClientPropertiesProvider(new ExtraClientPropertiesProvider());
 	}
 }

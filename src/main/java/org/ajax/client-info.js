@@ -1,6 +1,14 @@
-$(function() {
-	$(document.body).append('<div style="style="position:absolute; left: -10000px;" id="ajaxClientInfo"></div>');
-	$('#ajaxClientInfo').append('${ajaxClientInfoPanel}');
-	fillClientInfoForm($('#ajaxClientInfo form')[0]);
-	Wicket.Ajax.ajax({"f":"${ajaxClientInfoFormId}","u":"${ajaxClientInfoFormUrl}","m":"POST"});
-});
+;(function (undefined) {
+
+	'use strict';
+
+	if (typeof(org_json) === 'undefined') {
+		window.org_json = {
+			extraInfo: function() {
+				return {
+					protocol: window.location.protocol
+				};
+			}
+		};
+	}
+})();
